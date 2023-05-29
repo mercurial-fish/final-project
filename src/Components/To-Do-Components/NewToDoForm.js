@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 
-export default function NewToDoForm({ onSubmit, styles }) {
+export default function NewToDoForm({ addTodo, styles }) {
   const [newItem, setNewItem] = useState("")
 
   function handleSubmit(e) {
     e.preventDefault()
     if (newItem === "") return
 
-    onSubmit(newItem)
+    addTodo(newItem)
 
     setNewItem("")
   }
 
   return (
-    <form onSubmit={handleSubmit} className={styles.newItemForm}>
+    <form className={styles.newItemForm}>
       <div className={styles.formRow}>
         <label htmlFor="item">New Item</label>
         <input
@@ -24,7 +24,9 @@ export default function NewToDoForm({ onSubmit, styles }) {
           id="item"
         />
       </div>
-      <Button variant="success">Add</Button>
+      <button
+        className={styles.btn}
+        onClick={handleSubmit}>Add</button>
     </form>
   )
 }

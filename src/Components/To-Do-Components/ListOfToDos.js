@@ -3,18 +3,21 @@ import ToDoItem from './ToDoItem'
 
 export default function ListOfToDos({ todos, toggleTodo, deleteTodo, styles }) {
   return (
-    <ul className={styles.list}>
+    <div className={styles.list}>
+    <ul>
       {todos.length === 0 && "No Todos"}
       {todos.map(todo => {
         return (
           <ToDoItem
             {...todo}
             key={todo.id}
+            styles={styles}
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
           />
         )
       })}
     </ul>
+    </div>
   )
 }

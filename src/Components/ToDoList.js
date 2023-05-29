@@ -43,10 +43,10 @@ export default function ToDoList() {
   }
 
   return (
-    <>
-      <NewToDoForm onSubmit={addTodo} styles={styles} />
+    <div className={styles.toDoContainer}>
       <h1 className={styles.header}>To-Do List</h1>
+      <NewToDoForm addTodo={addTodo} styles={styles} />
       <ListOfToDos todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} styles={styles} />
-    </>
+    </div>
   )
 }

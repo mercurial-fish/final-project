@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 
-export default function ToDoItem({ completed, id, title, toggleTodo, deleteTodo }) {
+export default function ToDoItem({ completed, id, title, toggleTodo, deleteTodo, styles }) {
   return (
     <li>
     <label>
@@ -12,11 +12,11 @@ export default function ToDoItem({ completed, id, title, toggleTodo, deleteTodo 
       />
       {title}
     </label>
-    <Button 
-      variant='danger'
+    <button 
+      className={styles.deleteBtn}
       onClick={() => deleteTodo(id)}>
       Delete
-    </Button>
+    </button>
   </li>
   )
 }
