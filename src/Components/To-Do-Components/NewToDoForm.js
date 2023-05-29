@@ -16,7 +16,7 @@ export default function NewToDoForm({ addTodo, styles }) {
   return (
     <form className={styles.newItemForm}>
       <div className={styles.formRow}>
-        <label htmlFor="item">New Item</label>
+        <label htmlFor="item">New Task</label>
         <input
           value={newItem}
           onChange={e => setNewItem(e.target.value)}

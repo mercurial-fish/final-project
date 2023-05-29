@@ -5,7 +5,7 @@ export default function ListOfToDos({ todos, toggleTodo, deleteTodo, styles }) {
   return (
     <div className={styles.list}>
     <ul>
-      {todos.length === 0 && "No Todos"}
+      {todos.length === 0 && "No To-Dos"}
       {todos.map(todo => {
         return (
           <ToDoItem

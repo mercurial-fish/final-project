@@ -6,24 +6,14 @@ import Movies from './Components/Movies';
 import ToDoList from './Components/ToDoList';
 import Home from './Components/Home';
 import ReadingList from './Components/ReadingList';
-import { Nav, Navbar, Container } from 'react-bootstrap';
+import Navigation from './Components/Navigation';
 
 
 export default function App() {
   return (
     <Router>
       <div>
-        <Navbar bg="info" variant="dark">
-          <Container>
-            <Navbar.Brand href="/">Dezi's Website</Navbar.Brand>
-            <Nav className='me-auto'>
-              <Nav.Link href="/movies">Movies</Nav.Link>
-              <Nav.Link href="/toDoList">To-Do List</Nav.Link>
-              <Nav.Link href="/readingList">Reading List</Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
-
+        <Navigation />
         <Switch>
           <Route path="/readingList">
             <ReadingList />
