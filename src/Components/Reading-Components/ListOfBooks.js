@@ -1,9 +1,11 @@
 import React from 'react'
-import { useState } from 'react'
 import { Table, Button } from 'react-bootstrap'
 import UpdateBook from './UpdateBook'
 
 export default function ListOfBooks({books, booksAPI, getBooks, styles}) {
+
+/*NOTE fetches a specific object by using the url and the object's id and will use the delete method to delete it.
+Then, the new book array will be retrieved by getBooks */
 
     function deleteBook(id) {
 

@@ -1,3 +1,5 @@
+//NOTE - Imports functions, css, and Bootstrap
+
 import React from 'react';
 import { useState, useEffect } from 'react';
 import NewBookForm from './Reading-Components/NewBookForm';
@@ -9,6 +11,8 @@ export default function ReadingList() {
 
     const [books, setBooks] = useState([]);
 
+ //NOTE - fetches data from API to be used to create the booklist
+
     function getBooks() {
         fetch(BOOKS_API)
             .then((data) => data.json())
@@ -18,6 +22,11 @@ export default function ReadingList() {
     useEffect(() => {
         getBooks()
     }, [])
+
+/*NOTE - Instead of using one CSS file for the whole app, I created a stylesheet for each page. So the styles are passed as props
+to the smaller components. Also, the booksAPI and getBooks are passed as props, so they can be used to make functions in the other
+components. List of Books has the books array as a prop, since it will need to print out the book info given.
+*/
 
   return (
     <div className={styles.readingList}>

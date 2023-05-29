@@ -1,12 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
-import { Form, Card, Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 
 export default function NewBookForm({booksAPI, getBooks, styles}) {
 
     const [newTitle, setNewTitle] = useState("");
     const [newAuthor, setNewAuthor] = useState("");
     const [newGenre, setNewGenre] = useState("");
+
+/*NOTE - on the event, the books api will be fetched and the new info taken in will create a new object for the array to be added to the API.
+It will then set the values back to blank, so the input field will be blank after the form is submitted */
 
     function addBook(e) {
         e.preventDefault();
@@ -28,6 +31,8 @@ export default function NewBookForm({booksAPI, getBooks, styles}) {
         setNewTitle("");
         setNewGenre("");
     }
+
+/*NOTE used react Bootstrap for some basic styling and then used CSS to tidy it up and make it more unique */
 
   return (
     <div className={styles.bookForm}>

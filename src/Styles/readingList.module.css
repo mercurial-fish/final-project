@@ -1,15 +1,20 @@
+/*NOTE Creates a universal font, background color and text color for the component */
 .readingList {
     font-family: fantasy;
     height: 100vh;
     background-color: teal;
     color: aliceblue;
 }
+
+
 .header {
     text-align: center;
     padding-top: 3rem;
     padding-bottom: 1rem;
 }
 
+/*NOTE - gives the form a different color and a border so it sticks out. It also makes the form a contained box versus it spreading
+over the whole page */
 .bookForm {
     background-color: rgb(0, 62, 128);
     border: solid white;
@@ -19,6 +24,8 @@
     margin: 0 auto;
 }
 
+
+/*NOTE - gives the table a different background color and creates a margin to keep some space between the table and the form */
 .table {
     border: solid white;
     background-color: rgb(160, 13, 209);
@@ -30,6 +37,8 @@
     font-size: 24px;
 }
 
+
+/*NOTE - while hovering over the table rows, the background and text of the row will change color */
 .table tr:hover {
     background-color: rgb(206, 0, 252);
     color: rgb(164, 247, 234);

@@ -8,6 +8,9 @@ export default function UpdateBook({bookID, getBooks, booksAPI}) {
     const [updatedAuthor, setUpdatedAuthor] = useState("");
     const [updatedGenre, setUpdatedGenre] = useState("");
 
+    /*NOTE set a state for show to handle the opening and closing of the modal and it is a boolean.
+    Please reference the following url for more info https://react-bootstrap.github.io/components/modal/ */
+
     const [show, setShow] = useState(false);
 
     function handleClose() {
@@ -17,6 +20,10 @@ export default function UpdateBook({bookID, getBooks, booksAPI}) {
     function handleShow() {
         setShow(true);
     }
+
+    /*NOTE fetches a specific object from the API by targeting the id and uses the PUT method to update it. It will take in the
+    values from the form below. When the array is updated, it will retrieve the new array and trigger the handleClose function
+    that will close the modal*/
 
     function updateBook(bookID) {
         let id = bookID;
@@ -34,6 +41,9 @@ export default function UpdateBook({bookID, getBooks, booksAPI}) {
         }).then(() => getBooks())
         handleClose();
     }
+
+    /*NOTE The update form is attached to each instance of a book object being rendered. The form is in a modal that is linked to a button named "Edit". 
+    The user will then have the option to close out of the form or update the book, which will then close out the form upon submission */
 
   return (
     <>

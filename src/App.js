@@ -1,7 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import './App.css';
 import Movies from './Components/Movies';
 import ToDoList from './Components/ToDoList';
 import Home from './Components/Home';
