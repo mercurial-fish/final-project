@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Accordion, Card } from 'react-bootstrap';
 
 /*NOTE - This component returns the all properties of the movie object, except for the reviews object. It is styled

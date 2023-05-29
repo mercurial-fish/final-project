@@ -1,9 +1,5 @@
-// ReviewForm: a form at the bottom of a Movie component that allows users to leave reviews. 
-//When submitted, the review should be added to the movie. All this data can be stored in an array, 
-//no networking or database needed for this assignment.
-
 import React, { useState } from 'react';
-import { Container, Col, Row, Button, Form, Accordion } from "react-bootstrap";
+import { Button, Form, Accordion } from "react-bootstrap";
 import { Rating } from '@mui/material'; //NOTE - this is the star rating functionality imported from pre-existing library
 import ReviewList from './ReviewList';
 

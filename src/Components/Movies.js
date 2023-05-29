@@ -4,6 +4,9 @@ import styles from '../Styles/movies.module.css'
 
 export default function Movies() {
 
+	/*NOTE - created an array of objects named "movies" to be used in the smaller components of the application,
+	so it can be rendered, styled and have reviews added to it */
+
 	const movies = [
 		{
 			id: 1,
@@ -174,6 +177,9 @@ export default function Movies() {
 		}
 	]
 	
+		/*NOTE - Instead of using one CSS file for the whole app, I created a stylesheet for each page. So the styles are passed as props
+		to the smaller components */
+
 		return (
 			<MovieList movies={movies} styles={styles} />
 		);
