@@ -2,7 +2,8 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import './App.css';
-import About from './Components/About';
+import Movies from './Components/Movies';
+import ToDoList from './Components/ToDoList';
 import Home from './Components/Home';
 import ReadingList from './Components/ReadingList';
 import { Nav, Navbar, Container } from 'react-bootstrap';
@@ -12,27 +13,26 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/readingList">Reading List</Link>
-            </li>
-          </ul>
-        </nav>
-        
+        <Navbar bg="info" variant="dark">
+          <Container>
+            <Navbar.Brand href="/">Dezi's Website</Navbar.Brand>
+            <Nav className='me-auto'>
+              <Nav.Link href="/movies">Movies</Nav.Link>
+              <Nav.Link href="/toDoList">To-Do List</Nav.Link>
+              <Nav.Link href="/readingList">Reading List</Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
 
         <Switch>
           <Route path="/readingList">
             <ReadingList />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/toDoList">
+            <ToDoList />
+          </Route>
+          <Route path="/movies">
+            <Movies />
           </Route>
           <Route path="/">
             <Home />
