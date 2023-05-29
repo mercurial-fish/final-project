@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Table, Button } from 'react-bootstrap'
 import UpdateBook from './UpdateBook'
 
-export default function ListOfBooks({books, booksAPI, getBooks}) {
+export default function ListOfBooks({books, booksAPI, getBooks, styles}) {
 
     function deleteBook(id) {
 
@@ -13,7 +13,8 @@ export default function ListOfBooks({books, booksAPI, getBooks}) {
     }
 
   return (
-    <Table>
+    <Table
+        className={styles.table}>
         <thead>
             <tr>
                 <th>Title</th>

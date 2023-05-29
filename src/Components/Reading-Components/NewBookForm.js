@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Form, Card, Button } from 'react-bootstrap';
 
-export default function NewBookForm({booksAPI, getBooks}) {
+export default function NewBookForm({booksAPI, getBooks, styles}) {
 
     const [newTitle, setNewTitle] = useState("");
     const [newAuthor, setNewAuthor] = useState("");
@@ -24,26 +24,33 @@ export default function NewBookForm({booksAPI, getBooks}) {
                 }
             )
         }).then(() => getBooks())
+        setNewAuthor("");
+        setNewTitle("");
+        setNewGenre("");
     }
 
   return (
+    <div className={styles.bookForm}>
     <Form>
         <Form.Group className="mb-3">
             <Form.Label>Title</Form.Label>
             <Form.Control 
-                type="text" 
+                type="text"
+                value={newTitle} 
                 onChange={(e) => setNewTitle(e.target.value)}/>
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>Author</Form.Label>
             <Form.Control 
-                type="text" 
+                type="text"
+                value={newAuthor}
                 onChange={(e) => setNewAuthor(e.target.value)} />
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>Genre</Form.Label>
             <Form.Control 
                 type="text" 
+                value={newGenre}
                 onChange={(e) => setNewGenre(e.target.value)} />
         </Form.Group>
         <Button 
@@ -53,5 +60,6 @@ export default function NewBookForm({booksAPI, getBooks}) {
             >Create</Button>
 
     </Form>
+    </div>
   )
 }

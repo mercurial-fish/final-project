@@ -6,6 +6,7 @@
 
 
    .toDoContainer {
+    height: 100vh;
     font-family: "Audiowide";
     background-color: #333;
     color: hsl(200, 100%, 90%);
