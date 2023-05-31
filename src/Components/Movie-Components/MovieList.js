@@ -1,6 +1,7 @@
 import React from 'react';
 import Movie from './Movie';
 import ReviewForm from './ReviewForm';
+import Navigation from '../Navigation';
 
 
 /*NOTE - This function uses the movies array and maps over each object index in the array and returns the Movie and a Review Form.

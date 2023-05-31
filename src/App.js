@@ -11,8 +11,7 @@ import Navigation from './Components/Navigation';
 export default function App() {
   return (
     <Router>
-      <div>
-        <Navigation />
+      <Navigation />
         <Switch>
           <Route path="/readingList">
             <ReadingList />
@@ -27,7 +26,6 @@ export default function App() {
             <Home />
           </Route>
         </Switch>
-        </div>
     </Router>
   );
 }
